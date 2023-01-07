@@ -1,0 +1,26 @@
+/* Main Content */
+
+.grid-item--padding {
+    padding: 35px 25px;
+}
+.main-content__grid--align-content {
+    align-content: center;
+}
+
+.grid-item__flags {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grid-item__vs {
+    font-size: 20px;
+    font-weight: bold;
+}
+.grid-item__match-info {
+    margin-top: 30px;
+    text-align: center;
+}
+.grid-item__match-date {
+    color: rgb(92, 91, 91);
+}

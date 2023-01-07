@@ -1,0 +1,336 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.wrapper {
+    width: 90%;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+/* base styles */
+h1 {
+    font-size: 3.5rem;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* common components */
+.btn {
+    text-align: center;
+    padding: 16px 25px;
+    background: #DD0000;
+    color: white;
+    border: 0;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn--border {
+    border: 1px solid #f5c7c7de;
+}
+
+.btn--bg-white {
+    background-color: white;
+    color: black;
+}
+
+.btn--margin-top {
+    margin-top: 1rem;
+}
+
+.btn__text--margin-transition {
+    margin-left: -5px;
+    margin-right: 5px;
+    transition: margin 0.2s ease-in;
+}
+
+.btn__icon--opacity-transition {
+    opacity: 0;
+    transition: opacity 0.2s ease-out;
+}
+
+.btn:hover .btn__text--margin-transition {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.btn:hover .btn__icon--opacity-transition {
+    opacity: 0.7;
+}
+
+/* Top Banner */
+.top-banner {
+    background: #161616;
+    border-radius: 30px;
+    padding: 2.2rem 2rem 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.banner-left {
+    color: white;
+    flex-basis: 40%;
+}
+
+.banner-left__heading {
+    line-height: 65px;
+}
+
+.banner-left__description {
+    margin: 20px 0 30px;
+}
+
+.banner-right {
+    flex-basis: 40%;
+}
+
+.banner-right__img {
+    margin-bottom: -7px;
+}
+
+
+/* Main Content */
+
+.main-content {
+    margin: 100px 0;
+    display: flex;
+}
+
+.main-content__sidebar {
+    background: #161616;
+    padding: 25px;
+    border-radius: 10px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    align-self: flex-start;
+    margin-right: 20px;
+}
+.main-content__grid {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.grid-item {
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.grid-item__text-container {
+    padding: 15px;
+}
+
+.grid-item__tag {
+    padding: 5px 10px;
+    display: inline-block;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #161616;
+}
+
+.grid-item__meta-container {
+    margin-top: 20px;
+    display: flex;
+}
+
+.grid-item__meta-info {
+    display: flex;
+}
+
+.grid-item__meta-info--margin-right {
+    margin-right: 45px;
+}
+
+.grid-item__meta-icon {
+    margin-right: 10px;
+}
+
+/* Footer */
+
+.footer {
+    background: black;
+    padding: 3rem 5.5rem;
+}
+
+.footer__website-name {
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    font-size: 33px;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #FFFFFF1A;
+}
+
+.footer__links {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.footer__link {
+    margin-right: 1.5rem;
+    color: #B9B9B9;
+}
+
+.footer__link--no-margin {
+    margin: 0;
+}
+
+.footer__social-link {
+    margin-right: 1.5rem;
+    color: white;
+}
+
+.footer__social-link--no-margin {
+    margin: 0;
+}
+
+.footer__social-icon {
+    font-size: 1.5rem;
+}
+
+.view-all {
+    text-align: center;
+    display: none;
+}
+
+/* Common Media Query For Mobile and Tablet Responsive Design */
+@media only screen and (max-width: 1024px) {
+    
+    /* Top Banner */
+    .banner-left {
+        margin-bottom: 1rem;
+    }
+    .banner-left__heading {
+        line-height: 43px;
+    }
+    .banner-left__description-hide {
+        display: none;
+    }
+
+    /* Main Content */
+    .main-content {
+        flex-direction: column;
+    }
+    .main-content__sidebar {
+        background: white;
+        margin-right: 0;
+        padding: 0 15px 30px;
+        align-self: auto;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 1.5rem 2.5rem;
+    }
+
+}
+
+/* Media Query For Mobile Responsive Design */
+@media only screen and (max-width: 600px) {
+
+
+    /* base styles */
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    /* Top Banner */
+
+    .top-banner {
+        flex-direction: column;
+        border-radius: 10px;
+    }
+
+    .banner-left {
+        text-align: center;
+    }
+
+    /* Main Content */
+    .main-content {
+        margin: 30px 0;
+    }
+    .main-content__grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Footer */
+
+    .footer__link {
+        display: block;
+        margin: 0 0 1.2rem 0;
+    }
+}
+
+/* Media Query For Tab Responsive Design */
+@media only screen and (max-width:1024px) and (min-width: 601px) {
+    
+    
+    /* base styles */
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    /* common components */
+    .btn--margin-top {
+        margin-top: 0;
+    }
+    .btn {
+        flex-basis: 30%;
+    }
+
+    /* Top Banner */
+    .banner-left {
+        flex-basis: 51%;
+    }
+    .banner-right {
+        flex-basis: 47%;
+    }
+
+
+    /* Main Content */
+    .main-content {
+        margin: 70px 0;
+    }
+
+    .main-content__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .main-content__sidebar {
+        flex-direction: row;
+        flex-basis: 100%;
+        justify-content: space-evenly;
+    }
+    .view-all {
+        display: block;
+    }
+    /* Footer */
+    .footer__link {
+        display: inline-block;
+        margin: 1rem;
+    }
+}
